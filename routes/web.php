@@ -27,8 +27,3 @@ Route::post('/siparis-gonder', [\App\Http\Controllers\SiteController::class, 'si
 
 Route::get('/yazarlarımız', [\App\Http\Controllers\SiteController::class, 'yazarlarımız'])->name('yazarlarımız');
 Route::get('/iletisim', [\App\Http\Controllers\SiteController::class, 'iletisim'])->name('iletisim');
-
-
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
