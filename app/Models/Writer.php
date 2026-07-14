@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Writer extends Model
 {
+    protected $fillable = ['title', 'photo'];
 
 }

@@ -24,15 +24,15 @@ class BookResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
-                    ->maxLength(255),
+                    ->label('Başlık')->maxLength(255),
                 Forms\Components\Textarea::make('content')
-                    ->columnSpanFull(),
+                    ->label('İçerik')->columnSpanFull(),
                 Forms\Components\FileUpload::make('photo')
-                    ->image()
+                    ->label('Fotoğraf')->image()
                     ->directory('books')
                     ->disk('public'),
                 Forms\Components\TextInput::make('price')
-                    ->maxLength(255),
+                    ->label('Fiyat')->maxLength(255),
             ]);
     }
 
@@ -41,17 +41,17 @@ class BookResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
+                    ->label('Başlık')->searchable(),
                 Tables\Columns\TextColumn::make('photo')
-                    ->searchable(),
+                    ->label('Fotoğraf')->searchable(),
                 Tables\Columns\TextColumn::make('price')
-                    ->searchable(),
+                    ->label('Fiyat')->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
+                    ->label('Oluşturulma Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
+                    ->label('Güncellenme Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])

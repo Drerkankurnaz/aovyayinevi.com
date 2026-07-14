@@ -24,20 +24,20 @@ class OrderResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('book')
-                    ->maxLength(255),
+                    ->label('Kitap')->maxLength(255),
                 Forms\Components\TextInput::make('name')
-                    ->maxLength(255),
+                    ->label('İsim')->maxLength(255),
                 Forms\Components\TextInput::make('phone')
-                    ->tel()
+                    ->label('Telefon')->tel()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('tc')
-                    ->maxLength(255),
+                    ->label('TC Kimlik')->maxLength(255),
                 Forms\Components\TextInput::make('address')
-                    ->maxLength(255),
+                    ->label('Adres')->maxLength(255),
                 Forms\Components\TextInput::make('address_two')
-                    ->maxLength(255),
+                    ->label('Fatura Adresi')->maxLength(255),
                 Forms\Components\TextInput::make('adet')
-                    ->maxLength(255),
+                    ->label('Adet')->maxLength(255),
             ]);
     }
 
@@ -46,25 +46,25 @@ class OrderResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('book')
-                    ->searchable(),
+                    ->label('Kitap')->searchable(),
                 Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
+                    ->label('İsim')->searchable(),
                 Tables\Columns\TextColumn::make('phone')
-                    ->searchable(),
+                    ->label('Telefon')->searchable(),
                 Tables\Columns\TextColumn::make('tc')
-                    ->searchable(),
+                    ->label('TC Kimlik')->searchable(),
                 Tables\Columns\TextColumn::make('address')
-                    ->searchable(),
+                    ->label('Adres')->searchable(),
                 Tables\Columns\TextColumn::make('address_two')
-                    ->searchable(),
+                    ->label('Fatura Adresi')->searchable(),
                 Tables\Columns\TextColumn::make('adet')
-                    ->searchable(),
+                    ->label('Adet')->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
+                    ->label('Oluşturulma Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
+                    ->label('Güncellenme Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])

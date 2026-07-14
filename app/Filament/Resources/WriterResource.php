@@ -24,9 +24,9 @@ class WriterResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
-                    ->maxLength(255),
+                    ->label('Başlık')->maxLength(255),
                 Forms\Components\FileUpload::make('photo')
-                    ->image()
+                    ->label('Fotoğraf')->image()
                     ->directory('writers')
                     ->disk('public'),
             ]);
@@ -37,15 +37,15 @@ class WriterResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
+                    ->label('Başlık')->searchable(),
                 Tables\Columns\TextColumn::make('photo')
-                    ->searchable(),
+                    ->label('Fotoğraf')->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
+                    ->label('Oluşturulma Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
+                    ->label('Güncellenme Tarihi')->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
