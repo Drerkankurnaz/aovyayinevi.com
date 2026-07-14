@@ -19,6 +19,16 @@ class WriterResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getModelLabel(): string
+    {
+        return 'Yazar';
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return 'Yazarlar';
+    }
+
     public static function form(Form $form): Form
     {
         return $form
