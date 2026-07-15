@@ -41,8 +41,8 @@
         .cl-back { position: absolute; right: 2.5rem; top: 2.5rem; border-radius: 9999px; background: rgba(255,255,255,0.1); padding: 0.6rem 1.2rem; font-size: 0.875rem; color: rgba(255,255,255,0.9); text-decoration: none; backdrop-filter: blur(6px); }
         .cl-back:hover { background: rgba(255,255,255,0.2); }
         .cl-visual-content { display: flex; max-width: 32rem; flex-direction: column; align-items: center; }
-        .cl-logo-badge { background: #ffffff; border-radius: 1.25rem; padding: 1.5rem; display: inline-flex; }
-        .cl-logo { height: 7.5rem; width: auto; }
+        .cl-logo-badge { background: #ffffff; border-radius: 1.5rem; padding: 2rem; display: inline-flex; }
+        .cl-logo { height: 10rem; width: auto; }
         .cl-logo-sm { height: 2.5rem; width: auto; }
         .cl-heading { margin-top: 2.5rem; font-size: 2.75rem; font-weight: 600; line-height: 1.2; color: #ffffff; }
         .cl-sub { margin-top: 1.5rem; font-size: 1.125rem; color: rgba(255,255,255,0.6); }
