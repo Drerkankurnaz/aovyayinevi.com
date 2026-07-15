@@ -92,12 +92,9 @@
             <div class="row">
                 <div class="col-12 col-lg-6 pt-xl-12 pt-lg-8">
                     <h2 class="playfair fwEbold position-relative mb-7 pb-5">
-                        <strong class="d-block">Hikayemiz</strong>
+                        <strong class="d-block">{{ $about?->getTranslatedAttribute('title', app()->getLocale(), 'fallbackLocale') ?? 'Hikayemiz' }}</strong>
                     </h2>
-                    <p class="pr-xl-16 pr-lg-10 mb-lg-0 mb-6">Alpaslan Otizm Vakfı Yayınevi, Alpaslan Eğitim ve Danışmanlık A.Ş. bünyesinde faaliyet göstermektedir.  Alpaslan Eğitim ve Danışmanlık A.Ş, çeşitli bilimsel eserlerin hazırlanması ve yayımlanmasının yanısıra, seminer-konferans-kongre-kurs gibi bilimsel etkinliklerin düzenlenmesi faaliyetlerini de yürütmektedir.
-                        Alpaslan Otizm Vakfı, otizmli bireylerin eğitiminde bilimsel temelli yöntemler kullanmak amacıyla 2019 yılında yola çıktı. Bu hedef doğrultusunda otizm konusunda uzman akademisyenlerden oluşturulan Bilim Kurulu, otizmli bireylerin eğitiminde kullanılmak üzere Türkiye şartlarına uygun bilimsel temelli yeni bir eğitim modeli geliştirmek üzere çalışmalara başladı. Bu çalışmalar sürerken, bilim kurulu üyesi akademisyenlerin otizm konusunda ürettikleri eserlerin kitap olarak basılması ihtiyacı ortaya çıktı.
-
-                        İşte Alpaslan Otizm Vakfı Yayınevi, bu amaçla kuruldu. Önce, Alpaslan Otizm Vakfı Bilim Kurulu üyelerinin eserlerini basmak üzere kurulan Alpaslan Otizm Vakfı Yayınevi, daha sonra otizm konusunda Türkiye ve dünya çapında bilimsel eserler üreten ve otizm konusunda eserlerini bastırmak isteyen akademisyenleri destekleyen bir yayınevi olmak üzere geliştirildi.</p>
+                    <p class="pr-xl-16 pr-lg-10 mb-lg-0 mb-6">{!! $about?->getTranslatedAttribute('content', app()->getLocale(), 'fallbackLocale') !!}</p>
                 </div>
                 <div class="col-12 col-lg-6">
                     <img src="{{asset('assets/images/hikayemiz.jpg')}}" alt="image description" class="img-fluid">

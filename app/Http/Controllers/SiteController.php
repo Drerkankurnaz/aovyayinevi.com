@@ -37,25 +37,22 @@ class SiteController extends \App\Http\Controllers\Controller
     public function hikayemiz()
     {
         return view('hikayemiz', [
+            'about' => About::where('id', 1)->first(),
         ]);
     }
 
 
     public function vizyonumuz()
     {
-
         return view('vizyonumuz', [
-
-
+            'about' => About::where('id', 2)->first(),
         ]);
     }
 
     public function misyonumuz()
     {
-
         return view('misyonumuz', [
-
-
+            'about' => About::where('id', 3)->first(),
         ]);
     }
 

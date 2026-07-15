@@ -92,20 +92,9 @@
             <div class="row">
                 <div class="col-12 col-lg-6 pt-xl-12 pt-lg-8">
                     <h2 class="playfair fwEbold position-relative mb-7 pb-5">
-                        <strong class="d-block">Vizyonumuz</strong>
+                        <strong class="d-block">{{ $about?->getTranslatedAttribute('title', app()->getLocale(), 'fallbackLocale') ?? 'Vizyonumuz' }}</strong>
                     </h2>
-                    <p class="pr-xl-16 pr-lg-10 mb-lg-0 mb-6">
-                        Otizm Spektrum Bozukluğundan (OSB) etkilenen bireylere, ailelerine, özel eğitim konusunda öğrenim gören öğrencilere, otizmli bireyler ile çalışan eğitmenlere ve akademik çevrelere yönelik, eğitici, akademik ve mesleki yayın yapmak; <br><br>
-                        Bilgi-iletişim sektöründeki teknolojik gelişmeleri yakından takip ederek, bunların sağladığı bütün imkanları okuyucularının hizmetine sunmak,<br><br>
-                        Benimsediği etik değerler doğrultusunda, kalitesinden hiçbir zaman ödün vermeden, yenilikçi, çağdaş ve sürdürülebilir (Sustainable Publisher) bir yayın kuruluşu olmak,<br><br>
-
-
-                        Otizm konusunda;<br>
-                        Eserlerini bastırmak isteyen akademisyenleri;
-                        basılan eserlerden yararlanmak isteyen öğrenci ve eğitimcileri;
-                        eğitim veren vakıf ve dernekleri desteklemek;
-                        Otizm konusunda uzmanlaşarak, ulusal ve uluslararası düzeyde lider ve referans kurum haline gelmek.
-                    </p>
+                    <p class="pr-xl-16 pr-lg-10 mb-lg-0 mb-6">{!! $about?->getTranslatedAttribute('content', app()->getLocale(), 'fallbackLocale') !!}</p>
                 </div>
                 <div class="col-12 col-lg-6">
                     <img src="{{asset('assets/images/hikayemiz.jpg')}}" alt="image description" class="img-fluid">
