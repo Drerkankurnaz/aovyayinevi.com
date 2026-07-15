@@ -1,20 +1,18 @@
 <div class="fixed inset-0 z-[60] flex min-h-screen w-full bg-[#0d1120]">
     {{-- Left visual panel --}}
-    <div class="relative hidden w-1/2 flex-col justify-between overflow-hidden p-10 lg:flex"
+    <div class="relative hidden w-1/2 flex-col items-center justify-center overflow-hidden p-10 text-center lg:flex"
          style="background: radial-gradient(circle at 15% 15%, #6366f1 0%, transparent 45%), radial-gradient(circle at 85% 85%, #22d3ee 0%, transparent 45%), linear-gradient(160deg, #0b1024 0%, #131a35 55%, #171f3d 100%);">
-        <div class="flex items-center justify-between">
-            <div class="rounded-xl bg-white p-2">
-                <img src="{{ asset('assets/images/logo.png') }}" alt="AOV Yayınevi" class="h-10 w-auto">
+        <a href="{{ url('/') }}" class="absolute right-10 top-10 rounded-full bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur transition hover:bg-white/20">
+            ← Siteye dön
+        </a>
+        <div class="flex max-w-lg flex-col items-center">
+            <div class="rounded-2xl bg-white p-4">
+                <img src="{{ asset('assets/images/logo.png') }}" alt="AOV Yayınevi" class="h-20 w-auto lg:h-24">
             </div>
-            <a href="{{ url('/') }}" class="rounded-full bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur transition hover:bg-white/20">
-                ← Siteye dön
-            </a>
-        </div>
-        <div class="max-w-md">
-            <h2 class="text-3xl font-semibold leading-tight text-white">
+            <h2 class="mt-10 text-4xl font-semibold leading-tight text-white lg:text-5xl">
                 Bilimin izinde,<br>kalemin gücüyle.
             </h2>
-            <p class="mt-4 text-white/60">
+            <p class="mt-6 text-lg text-white/60">
                 AOV Yayınevi içerik yönetim paneline hoş geldiniz.
             </p>
         </div>
