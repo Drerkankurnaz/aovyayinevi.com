@@ -38,6 +38,9 @@ class WriterResource extends Resource
                 Forms\Components\FileUpload::make('photo')
                     ->label('Fotoğraf')->image()
                     ->directory('writers')
+                    ->imageResizeMode('cover')
+                    ->imageResizeTargetWidth('900')
+                    ->imageResizeTargetHeight('1200')
                     ->disk('public'),
             ]);
     }
