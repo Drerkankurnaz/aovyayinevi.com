@@ -48,14 +48,24 @@
         .cl-sub { margin-top: 1.5rem; font-size: 1.125rem; color: rgba(255,255,255,0.6); }
         .cl-form-panel { display: flex; width: 100%; flex-direction: column; justify-content: center; background: #0d1120; padding: 4rem 1.5rem; }
         .cl-form-inner { margin: 0 auto; width: 100%; max-width: 24rem; }
-        .cl-logo-mobile { display: none; margin-bottom: 2rem; }
+        .cl-logo-mobile { display: block; width: fit-content; margin: 0 auto 2rem; padding: 0.75rem; }
         .cl-form-title { font-size: 1.5rem; font-weight: 600; color: #ffffff; margin: 0; }
         .cl-form-subtitle { margin-top: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.5); }
         .cl-form-body { margin-top: 2rem; }
 
+        @media (min-width: 640px) {
+            .cl-form-panel { padding-left: 3rem; padding-right: 3rem; }
+        }
+
         @media (min-width: 1024px) {
             .cl-visual { display: flex; }
             .cl-form-panel { width: 50%; padding-left: 5rem; padding-right: 5rem; }
+            .cl-logo-mobile { display: none; }
+        }
+
+        @media (max-width: 420px) {
+            .cl-heading { font-size: 2rem; }
+            .cl-form-panel { padding-top: 2.5rem; padding-bottom: 2.5rem; }
         }
 
         #cool-login label { color: #cbd5e1 !important; }
