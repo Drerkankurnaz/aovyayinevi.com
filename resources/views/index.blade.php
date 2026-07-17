@@ -14,6 +14,44 @@
     <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
 </head>
 <body>
+<div id="av-splash">
+    <div class="av-splash-badge">
+        <img src="{{ asset('assets/images/logo.png') }}" alt="AOV Yayınevi" class="av-splash-logo">
+    </div>
+    <style>
+        #av-splash {
+            position: fixed; inset: 0; z-index: 99999;
+            display: flex; align-items: center; justify-content: center;
+            background: radial-gradient(circle at 15% 15%, rgba(99,102,241,0.35) 0%, transparent 45%),
+                        radial-gradient(circle at 85% 85%, rgba(34,211,238,0.35) 0%, transparent 45%),
+                        linear-gradient(160deg, #0b1024 0%, #131a35 55%, #171f3d 100%);
+            transition: opacity .6s ease;
+        }
+        #av-splash.av-hide { opacity: 0; pointer-events: none; }
+        .av-splash-badge {
+            background: #ffffff; border-radius: 1.5rem; padding: 1.5rem;
+            animation: avSplashIn 1.1s ease both;
+            box-shadow: 0 0 40px rgba(99,102,241,0.45);
+        }
+        .av-splash-logo { height: 110px; width: auto; display: block; }
+        @keyframes avSplashIn {
+            0% { opacity: 0; transform: scale(.55); }
+            60% { opacity: 1; transform: scale(1.06); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+    <script>
+        (function () {
+            var s = document.getElementById('av-splash');
+            if (sessionStorage.getItem('avSplashShown')) { s.parentNode.removeChild(s); return; }
+            sessionStorage.setItem('avSplashShown', '1');
+            setTimeout(function () {
+                s.classList.add('av-hide');
+                setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 700);
+            }, 1500);
+        })();
+    </script>
+</div>
 <div id="pageWrapper">
     <header id="header" class="pt-lg-5 pt-md-3 pt-2 position-absolute w-100">
         <div class="container-fluid px-xl-17 px-lg-5 px-md-3 px-0 d-flex flex-wrap">
