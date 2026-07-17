@@ -3,20 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
-use App\Models\Activity;
 use App\Models\Announcement;
 use App\Models\Autism;
 use App\Models\Book;
 use App\Models\Contact;
 use App\Models\Content;
-use App\Models\Education;
 use App\Models\Order;
 use App\Models\Research;
 use App\Models\School;
 use App\Models\Service;
-use App\Models\Slide;
-use App\Models\Team;
-use App\Models\WebSetting;
 use App\Models\Writer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
